@@ -1,11 +1,4 @@
 {
-  "routes": [
-    {
-      "src": "/api",
-      "methods": ["GET"],
-      "dest": "/api"
-    }
-  ],
   "headers" : [
     {
       "source": "/api/(.*)",
