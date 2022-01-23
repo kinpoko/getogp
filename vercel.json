@@ -1,10 +1,13 @@
 {
-  "headers" : [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "https://kinpokoblog.com" }
-      ]
+      "src": "/api",
+      "methods": ["GET"],
+      "dest": "/api",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://kinpokoblog.com"
+      }
     }
   ]
+
 }
