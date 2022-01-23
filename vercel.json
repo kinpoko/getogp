@@ -9,7 +9,9 @@
   "headers" : [
     {
       "source": "/api/(.*)",
-      "Access-Control-Allow-Origin": "https://kinpokoblog.com"
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://kinpokoblog.com" }
+      ]
     }
   ]
 }
