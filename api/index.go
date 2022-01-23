@@ -3,8 +3,9 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/otiai10/opengraph"
 	"net/http"
+
+	"github.com/otiai10/opengraph"
 )
 
 type OGP struct {
@@ -35,7 +36,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
 	fmt.Fprint(w, string(res))
 
 }
